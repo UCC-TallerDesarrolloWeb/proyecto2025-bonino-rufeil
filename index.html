@@ -1,41 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburg</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburg</title>
+<link rel="stylesheet" href="styles.css" />
+  
+  <meta name="author" content="Joaquin Bonino y Demetrio Rufeil" />
+  <meta name="description" content="Hamburg - Menú de hamburguesas, bebidas y acompañamientos." />
+  <meta name="keywords" content="hamburguesas, comida, menú, bebidas, acompañamientos" />
+
+
 </head>
 <body>
-    <header>
-        <div class="container-hero">
-            <div class="container hero">
-                <div class="customer-support">
-                    <i class="fa-solid fa-headset"></i>
-                    <div class="content-customer-support">
-                        <span class="text">Soporte al cliente</span>
-                        <span class="number>+351-567-0876</span>"
-                    <img src="img/auriculares-con-microfono.png" alt="Icono servicio al cliente">
-                </div>
-            </div>
-            <div class="container-logo">
-                <img src="img/logo.png" alt="Logo Hamburg">
-                <h1 class="logo"><a href="/">Hamburg</a></h1>
-            </div>
-            <div class="container-user">
-                <img src="img/user.png" alt="Usuario">
-
-                <div class="container-cart">
-                    <img src="img/shopping-cart.png" alt="Carrito de compras">
-                    <span class="number-products">0</span>
-            </div>
-
+  <header>
+    <div class="container-hero">
+      <div class="container hero">
+        <div class="customer-support">
+            <img class="icon-headset" src="img/auriculares-con-microfono.png" alt="Soporte al cliente" />
+            <div class="content-customer-support">
+            <span class="text">Soporte al cliente</span>
+            <span class="number">+351-567-0876</span>
+          </div>
         </div>
-    </header>
-    
-    <main>
-        <img src="img/hamburguer.png" alt="Hamburguesa">
-    </main>
 
+        <div class="container-logo">
+          <img src="img/hamburguer.png" alt="Logo Hamburg" />
+          <h1 class="logo"><a href="index.html">Hamburg</a></h1>
+        </div>
+
+        <div class="container-user">
+          <img src="img/user.png" alt="Usuario" />
+
+          <div class="content-shopping-cart">
+            <img src="img/shopping-cart.png" alt="Carrito de compras" />
+            <span class="text">Carrito</span>
+            <span class="number-products" aria-live="polite">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="container-navbar">
+        <nav class="navbar container"
+        <img src="img/menu.png" alt="Abrir menú" />
+
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Hamburguesas</a></li>
+        <li><a href="bebidas.html">Bebidas</a></li>
+        <li><a href="acompanamientos.html">Acompañamientos</a></li>
+        <li><a href="sucursales.html">Dónde encontrarnos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+
+      <form class="search-form">
+
+        <input type="search" placeholder="Buscar..."/>
+    <button class="btn-search">
+      <img src="img/lupa.png" alt="Buscar" />
+    </button>
+      </form>
+    </nav>
+  </header>
+
+  <main>
+    
+  </main>
+
+  <footer>
+    <p>© 2025 Hamburg.</p>
+  </footer>
 </body>
 </html>

@@ -7,7 +7,7 @@
     --text-color: #3d3c3c;
 }
 html, body {
-    font-size: 62.5%;           /* para pasar de 16 px a 10 px */
+    font-size: 62.5%;           /*paraasar de 16 px a 10 px */
     font-family: 'Poppins', sans-serif;
 }
 *{
@@ -148,7 +148,7 @@ html, body {
 }
 
 
-/* botón menú hamburguesa (imagen en vez de font awesome) */
+/* boton men hamburguesa (imagen en vez de font awesome) */
 .navbar img[alt="Abrir menú"] {
     display: none;   /* se oculta en escritorio */
     width: 30px;
@@ -157,7 +157,7 @@ html, body {
 }
 
 
-/* menú principal */
+/* menú principalc*/
 .menu {
     display: flex;
     gap: 2rem;
@@ -416,3 +416,48 @@ html, body {
     text-transform: uppercase;
     font-weight: 600;
 }
+
+/* contenido del main acac */
+
+.main-content{
+    background-color: var(--background-color);
+}
+
+/* features*/
+.container-features{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    padding: 3rem 0;
+
+}
+
+.card-feature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+
+}
+
+.card-feature img{
+    font-size:2.7rem;
+    color: var(--primary-color);
+}
+
+.feature-content{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.feature-content span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+

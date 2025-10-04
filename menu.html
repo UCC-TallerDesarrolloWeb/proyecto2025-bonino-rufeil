@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú de Hamburguesas - La Mistica</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <meta name="author" content="Joaquin Bonino, Demetrio Rufeil, Santino Vercesi" />
+  <meta name="description" content="Menú de hamburguesas clásicas, dobles y triples." />
+  <meta name="keywords" content="hamburguesas, menú, clásica, doble, triple" />
+</head>
+<body>
+  <header>
+    <nav class="container-navbar" aria-label="Navegación principal">
+      <div class="navbar container">
+        <img src="img/menu.png" alt="Abrir menú" />
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html" aria-current="page">Hamburguesas</a></li>
+          <li><a href="sucursales.html">Dónde encontrarnos</a></li>
+        </ul>
+
+        <form class="search-form" role="search" aria-label="Buscar en el sitio">
+          <input type="search" placeholder="Buscar..." />
+          <button class="btn-search" type="submit" aria-label="Buscar">
+            <img src="img/lupa.png" alt="Buscar" />
+          </button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="main-content">
+    <section class="container top-categories" aria-labelledby="titulo-menu">
+      <h1 id="titulo-menu" class="heading-1">Nuestra seleccion para vos</h1>
+
+      <h2 class="heading-1">Simples</h2>
+      <div class="container-categories">
+        <a class="card-category category-clasica" href="#clasica" aria-label="Ver hamburguesas clásicas">
+          <p>Simple</p>
+          <span>$13.000</span>
+        </a>
+      </div>
+
+      <h2 class="heading-1">Dobles</h2>
+      <div class="container-categories">
+        <a class="card-category category-doble" href="#doble-mistica" aria-label="Ver hamburguesa Mistica">
+          <p>Mistica</p>
+          <span>$14.000</span>
+        </a>
+        <a class="card-category category-doble" href="#doble-barbecue" aria-label="Ver hamburguesa Barbecue">
+          <p>Barbecue</p>
+          <span>$14.500</span>
+        </a>
+        <a class="card-category category-doble" href="#doble-cheddar" aria-label="Ver hamburguesa Cheddar">
+          <p>Cheddar</p>
+          <span>$14.500</span>
+        </a>
+      </div>
+
+      <h2 class="heading-1">Triples</h2>
+      <div class="container-categories">
+        <a class="card-category category-triple" href="#triple" aria-label="Ver hamburguesas triples">
+          <p>Triple</p>
+          <span>$15.000</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 La Mistica.</p>
+  </footer>
+</body>
+</html>

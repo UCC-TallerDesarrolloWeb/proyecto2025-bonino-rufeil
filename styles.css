@@ -1,26 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-:root {
-    --primary-color: #d8b97f;
-    --secondary-color: #8f7e46;
-    --background-color: #ecdcc1;
-    --dark-color: #1a1a1a;
-    --text-color: #3d3c3c;
-}
-html, body {
-    font-size: 62.5%;           /*paraasar de 16 px a 10 px */
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: var(--background-color);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /*utilidades*/
 .container {/*para centrar*/
     max-width: 120rem;
@@ -550,6 +528,7 @@ body {
     grid-template-columns: repeat(3, 2fr);
     gap: 3rem;
     padding-left: 3rem;
+    padding-right : 3rem;
     justify-content: center;
 }
 .products-category{
@@ -619,4 +598,73 @@ body {
 .container-categories a.products-category:hover,
 .container-top-products a.products-category:hover {
     text-decoration: none;
+}
+/* MODAL PRODUCTO */
+.modal-producto {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.modal-toggle:checked + label + .modal-producto {
+    display: flex;
+}
+.modal-box {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+    width: 600px;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal-box h3 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.modal-box p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root {
+    --primary-color: #d8b97f;
+    --secondary-color: #8f7e46;
+    --background-color: #ecdcc1;
+    --dark-color: #1a1a1a;
+    --text-color: #3d3c3c;
+}
+html, body {
+    font-size: 62.5%;           /*paraasar de 16 px a 10 px */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

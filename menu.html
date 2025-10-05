@@ -62,49 +62,120 @@
 
   <main id="main" class="main-content">
   <section class="container top-categories" aria-labelledby="titulo-menu">
+    <h2 class="heading-1">Simples</h2>
+    <div class="container-categories">
+      <input type="checkbox" id="modal-simple" class="modal-toggle" hidden>
+      <label for="modal-simple" class="products-category product-simple" style="cursor:pointer;">
+        <div class="card-product">
+          <p>Simple</p>
+          <span>$13.000</span>
+        </div>
+      </label>
+      <div class="modal-producto" id="modal-simple-content">
+        <div class="modal-box">
+          <label for="modal-simple" class="modal-close">×</label>
+          <img src="img/hamburguesaclasica.png" alt="Hamburguesa Simple" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
+          <h3>Simple</h3>
+          <p>Precio: $13.000</p>
+          <form method="post" action="#" style="margin-top:1rem;">
+            <label for="cantidad-simple-modal">Cantidad:</label>
+            <input type="number" id="cantidad-simple-modal" name="cantidad-simple-modal" min="1" max="10" value="1" size="2">
+            <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
-      <h2 class="heading-1">Simples</h2>
-      <div class="container-categories">
-          <a class="products-category product-simple" href="#clasica" aria-label="Ver hamburguesas clásicas">
-            <div class="card-product">
-              <p>Simple</p>
-              <span>$13.000</span>
-            </div>
-          </a>
+    <h2 class="heading-1">Dobles</h2>
+    <div class="container-categories">
+      <input type="checkbox" id="modal-mistica" class="modal-toggle" hidden>
+      <label for="modal-mistica" class="products-category product-mistica" style="cursor:pointer;">
+        <div class="card-product">
+          <p>Mistica</p>
+          <span>$14.000</span>
+        </div>
+      </label>
+      <div class="modal-producto" id="modal-mistica-content">
+        <div class="modal-box">
+          <label for="modal-mistica" class="modal-close">×</label>
+          <img src="img/hamburguesadoble.png" alt="Hamburguesa Mistica" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
+          <h3>Mistica</h3>
+          <p>Precio: $14.000</p>
+          <form method="post" action="#" style="margin-top:1rem;">
+            <label for="cantidad-mistica-modal">Cantidad:</label>
+            <input type="number" id="cantidad-mistica-modal" name="cantidad-mistica-modal" min="1" max="10" value="1" size="2">
+            <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
+          </form>
+        </div>
       </div>
 
-      <h2 class="heading-1">Dobles</h2>
-      <div class="container-categories">
-          <a class="products-category product-mistica" href="#doble-mistica" aria-label="Ver hamburguesa Mistica">
-            <div class="card-product">
-              <p>Mistica</p>
-              <span>$14.000</span>
-            </div>
-          </a>
-          <a class="products-category product-barbecue" href="#doble-barbecue" aria-label="Ver hamburguesa Barbecue">
-            <div class="card-product">
-              <p>Barbecue</p>
-              <span>$14.500</span>
-            </div>
-          </a>
-          <a class="products-category product-cheddar" href="#doble-cheddar" aria-label="Ver hamburguesa Cheddar">
-            <div class="card-product">
-              <p>Cheddar</p>
-              <span>$14.500</span>
-            </div>
-          </a>
+      <input type="checkbox" id="modal-barbecue" class="modal-toggle" hidden>
+      <label for="modal-barbecue" class="products-category product-barbecue" style="cursor:pointer;">
+        <div class="card-product">
+          <p>Barbecue</p>
+          <span>$14.500</span>
+        </div>
+      </label>
+      <div class="modal-producto" id="modal-barbecue-content">
+        <div class="modal-box">
+          <label for="modal-barbecue" class="modal-close">×</label>
+          <img src="img/hamburguesatriple.png" alt="Hamburguesa Barbecue" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
+          <h3>Barbecue</h3>
+          <p>Precio: $14.500</p>
+          <form method="post" action="#" style="margin-top:1rem;">
+            <label for="cantidad-barbecue-modal">Cantidad:</label>
+            <input type="number" id="cantidad-barbecue-modal" name="cantidad-barbecue-modal" min="1" max="10" value="1" size="2">
+            <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
+          </form>
+        </div>
       </div>
 
-      <h2 class="heading-1">Triples</h2>
-      <div class="container-categories">
-          <a class="products-category product-barbecue" href="#triple" aria-label="Ver hamburguesas triples">
-            <div class="card-product">
-              <p>Triple</p>
-              <span>$15.000</span>
-            </div>
-          </a>
+      <input type="checkbox" id="modal-cheddar" class="modal-toggle" hidden>
+      <label for="modal-cheddar" class="products-category product-cheddar" style="cursor:pointer;">
+        <div class="card-product">
+          <p>Cheddar</p>
+          <span>$14.500</span>
+        </div>
+      </label>
+      <div class="modal-producto" id="modal-cheddar-content">
+        <div class="modal-box">
+          <label for="modal-cheddar" class="modal-close">×</label>
+          <img src="img/hamburguesatriple.png" alt="Hamburguesa Cheddar" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
+          <h3>Cheddar</h3>
+          <p>Precio: $14.500</p>
+          <form method="post" action="#" style="margin-top:1rem;">
+            <label for="cantidad-cheddar-modal">Cantidad:</label>
+            <input type="number" id="cantidad-cheddar-modal" name="cantidad-cheddar-modal" min="1" max="10" value="1" size="2">
+            <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
+          </form>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <h2 class="heading-1">Triples</h2>
+    <div class="container-categories">
+      <input type="checkbox" id="modal-triple" class="modal-toggle" hidden>
+      <label for="modal-triple" class="products-category product-barbecue" style="cursor:pointer;">
+        <div class="card-product">
+          <p>Triple</p>
+          <span>$15.000</span>
+        </div>
+      </label>
+      <div class="modal-producto" id="modal-triple-content">
+        <div class="modal-box">
+          <label for="modal-triple" class="modal-close">×</label>
+          <img src="img/hamburguesatriple.png" alt="Hamburguesa Triple" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
+          <h3>Triple</h3>
+          <p>Precio: $15.000</p>
+          <form method="post" action="#" style="margin-top:1rem;">
+            <label for="cantidad-triple-modal">Cantidad:</label>
+            <input type="number" id="cantidad-triple-modal" name="cantidad-triple-modal" min="1" max="10" value="1" size="2">
+            <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   </main>
 
   <footer>

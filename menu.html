@@ -11,6 +11,11 @@
   <meta name="description" content="Menú de hamburguesas clásicas, dobles y triples." />
   <meta name="keywords" content="hamburguesas, menú, clásica, doble, triple" />
 </head>
+
+
+
+
+
 <body>
   <header>
     <div class="container-hero">
@@ -31,7 +36,7 @@
         <div class="container-user">
           <img src="img/user.png" alt="Usuario" />
 
-          <div class="content-shopping-cart">
+          <div class="content-shopping-cart" onclick="location.href='carrito.html'" role="link" tabindex="0" style="cursor:pointer;">
             <img src="img/shopping-cart.png" alt="Carrito de compras" />
             <span class="text">Carrito</span>
             <span class="number-products" aria-live="polite">0</span>
@@ -77,7 +82,7 @@
           <img src="img/hamburguesaclasica.png" alt="Hamburguesa Simple" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
           <h3>Simple</h3>
           <p>Precio: $13.000</p>
-          <form method="post" action="#" style="margin-top:1rem;">
+          <form method="post" action="#" style="margin-top:1rem;" onsubmit="return handleAddToCart('Simple', 13000, 'cantidad-simple-modal')">
             <label for="cantidad-simple-modal">Cantidad:</label>
             <input type="number" id="cantidad-simple-modal" name="cantidad-simple-modal" min="1" max="10" value="1" size="2">
             <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
@@ -101,7 +106,7 @@
           <img src="img/hamburguesadoble.png" alt="Hamburguesa Mistica" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
           <h3>Mistica</h3>
           <p>Precio: $14.000</p>
-          <form method="post" action="#" style="margin-top:1rem;">
+          <form method="post" action="#" style="margin-top:1rem;" onsubmit="return handleAddToCart('Mistica', 14000, 'cantidad-mistica-modal')">
             <label for="cantidad-mistica-modal">Cantidad:</label>
             <input type="number" id="cantidad-mistica-modal" name="cantidad-mistica-modal" min="1" max="10" value="1" size="2">
             <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
@@ -122,7 +127,7 @@
           <img src="img/hamburguesatriple.png" alt="Hamburguesa Barbecue" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
           <h3>Barbecue</h3>
           <p>Precio: $14.500</p>
-          <form method="post" action="#" style="margin-top:1rem;">
+          <form method="post" action="#" style="margin-top:1rem;" onsubmit="return handleAddToCart('Barbecue', 14500, 'cantidad-barbecue-modal')">
             <label for="cantidad-barbecue-modal">Cantidad:</label>
             <input type="number" id="cantidad-barbecue-modal" name="cantidad-barbecue-modal" min="1" max="10" value="1" size="2">
             <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
@@ -143,7 +148,7 @@
           <img src="img/hamburguesatriple.png" alt="Hamburguesa Cheddar" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
           <h3>Cheddar</h3>
           <p>Precio: $14.500</p>
-          <form method="post" action="#" style="margin-top:1rem;">
+          <form method="post" action="#" style="margin-top:1rem;" onsubmit="return handleAddToCart('Cheddar', 14500, 'cantidad-cheddar-modal')">
             <label for="cantidad-cheddar-modal">Cantidad:</label>
             <input type="number" id="cantidad-cheddar-modal" name="cantidad-cheddar-modal" min="1" max="10" value="1" size="2">
             <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
@@ -167,7 +172,7 @@
           <img src="img/hamburguesatriple.png" alt="Hamburguesa Triple" style="width:260px; border-radius:1rem; margin-bottom:2rem; display:block;">
           <h3>Triple</h3>
           <p>Precio: $15.000</p>
-          <form method="post" action="#" style="margin-top:1rem;">
+          <form method="post" action="#" style="margin-top:1rem;" onsubmit="return handleAddToCart('Triple', 15000, 'cantidad-triple-modal')">
             <label for="cantidad-triple-modal">Cantidad:</label>
             <input type="number" id="cantidad-triple-modal" name="cantidad-triple-modal" min="1" max="10" value="1" size="2">
             <button type="submit" style="margin-left:1rem; padding:0.5rem 2rem; background:var(--secondary-color); color:#fff; border:none; border-radius:1rem; font-size:1rem; cursor:pointer;">Añadir al carrito</button>
@@ -181,6 +186,42 @@
   <footer>
     <p>© 2025 La Mistica.</p>
   </footer>
+
+  <script>
+  function handleAddToCart(productName, productPrice, qtyInputId){
+    try{
+      var qtyEl = document.getElementById(qtyInputId);
+      var qty = parseInt(qtyEl && qtyEl.value ? qtyEl.value : '1', 10);
+      if(isNaN(qty) || qty < 1) qty = 1;
+      var cart = [];
+      try{ cart = JSON.parse(localStorage.getItem('cart') || '[]'); }catch(e){ cart = []; }
+      cart.push({ name: productName, price: productPrice, qty: qty });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      var totalQty = 0;
+      for(var i=0;i<cart.length;i++){ totalQty += (parseInt(cart[i].qty,10)||0); }
+      var badge = document.querySelector('.number-products');
+      if(badge){ badge.textContent = totalQty; }
+      alert(productName + ' x' + qty + ' añadido al carrito');
+    }catch(err){
+      alert('No se pudo añadir al carrito.');
+    }
+    return false; // evita submit real
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    // pintar burbuja del carrito al cargar
+    try{
+      var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      var totalQty = 0;
+      for(var i=0;i<cart.length;i++){ totalQty += (parseInt(cart[i].qty,10)||0); }
+      var badge = document.querySelector('.number-products');
+      if(badge){ badge.textContent = totalQty; }
+    }catch(e){}
+  });
+</script>
+
+
+
 </body>
 <script>
 document.addEventListener('DOMContentLoaded', function() {

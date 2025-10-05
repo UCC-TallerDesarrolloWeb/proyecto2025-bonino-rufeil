@@ -43,33 +43,31 @@
     </div>
 
     <nav class="container-navbar">
-        <nav class="navbar container">
-        <img src="img/menu.png" alt="Abrir menú" />
-
-      <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html">Hamburguesas</a></li>
-        <!--<li><a href="bebidas.html">Bebidas</a></li>-->
-        <!-- <li><a href="acompanamientos.html">Acompañamientos</a></li> -->
-        <li><a href="sucursales.html">Dónde encontrarnos</a></li>
-        <!-- <li><a href="blog.html">Blog</a></li> -->
-      </ul>
-
-      <form class="search-form">
-
-        <input type="search" placeholder="Buscar..."/>
-    <button class="btn-search">
-      <img src="img/lupa.png" alt="Buscar" />
-    </button>
-      </form>
-    </div>
+      <nav class="navbar container">
+        <img src="img/menu.png" alt="Abrir menú" id="btn-menu" style="display:none;" />
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Hamburguesas</a></li>
+          <!--<li><a href="bebidas.html">Bebidas</a></li>-->
+          <!-- <li><a href="acompanamientos.html">Acompañamientos</a></li> -->
+          <li><a href="sucursales.html">Dónde encontrarnos</a></li>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+        </ul>
+        <form class="search-form">
+          <input type="search" placeholder="Buscar..."/>
+          <button class="btn-search">
+            <img src="img/lupa.png" alt="Buscar" />
+          </button>
+        </form>
+      </nav>
+    </nav>
   </header>
  
   <section class="banner">
     <div class="content-banner">
       <p>las mejores hamburguesas de cordoba</p>
       <h2>Hamburguesas Premium</h2>
-      <a href="#">Comprar</a>
+      <a href="menu.html">Comprar</a>
     </div>
   </section>
  <main class="main-content">
@@ -113,15 +111,15 @@
       <div class="container-categories">
         <div class="card-category category-clasica">
           <p>Clasica</p>
-          <span>Ver más</span>
+          <span><a href="menu.html" style="color: #fff; text-decoration: none;">Ver más</a></span>
         </div>
-         <div class="card-category category-doble">
+        <div class="card-category category-doble">
           <p>Doble</p>
-          <span>Ver más</span>
+          <span><a href="menu.html" style="color: #fff; text-decoration: none;">Ver más</a></span>
         </div>
-         <div class="card-category category-triple">
+        <div class="card-category category-triple">
           <p>Triple</p>
-          <span>Ver más</span>
+          <span><a href="menu.html" style="color: #fff; text-decoration: none;">Ver más</a></span>
         </div>       
       </div>
     </section>
@@ -152,5 +150,93 @@
   <footer>
     <p>© 2025 La Mistica.</p>
   </footer>
+</body>
+<script>
+// Buscador inteligente
+document.addEventListener('DOMContentLoaded', function() {
+  var searchForm = document.querySelector('.search-form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var value = searchForm.querySelector('input[type="search"]').value.trim().toLowerCase();
+      if (value === 'inicio') {
+        window.location.href = 'index.html';
+      } else if (value === 'hamburguesas') {
+        window.location.href = 'menu.html';
+      } else if (value === 'donde encontrarnos' || value === 'dónde encontrarnos') {
+        window.location.href = 'sucursales.html';
+      } else {
+        alert('No se encontró la página para: ' + value);
+      }
+    });
+  }
+
+  // Menú hamburguesa para móviles
+  var btnMenu = document.getElementById('btn-menu');
+  var menu = document.querySelector('.menu');
+  function checkMenuDisplay() {
+    if (window.innerWidth <= 768) {
+      btnMenu.style.display = 'block';
+      menu.style.display = 'none';
+      // Limpia estilos de escritorio
+      menu.style.flexDirection = '';
+      menu.style.position = '';
+      menu.style.top = '';
+      menu.style.right = '';
+      menu.style.width = '';
+      menu.style.backgroundColor = '';
+      menu.style.padding = '';
+    } else {
+      btnMenu.style.display = 'none';
+      menu.style.display = 'flex';
+      // Estilo horizontal escritorio
+      menu.style.flexDirection = 'row';
+      menu.style.position = '';
+      menu.style.top = '';
+      menu.style.right = '';
+      menu.style.width = '';
+      menu.style.backgroundColor = '';
+      menu.style.padding = '';
+    }
+  }
+  checkMenuDisplay();
+  window.addEventListener('resize', checkMenuDisplay);
+  btnMenu.addEventListener('click', function() {
+    if (menu.style.display === 'none') {
+      menu.style.display = 'flex';
+      menu.style.flexDirection = 'column';
+      menu.style.position = 'absolute';
+      menu.style.top = '100%';
+      menu.style.right = '0';
+      menu.style.width = '200px';
+      menu.style.backgroundColor = '#d8b97f';
+      menu.style.padding = '1rem';
+    } else {
+      menu.style.display = 'none';
+    }
+  });
+});
+</script>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var searchForm = document.querySelector('.search-form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var value = searchForm.querySelector('input[type="search"]').value.trim().toLowerCase();
+      if (value === 'inicio') {
+        window.location.href = 'index.html';
+      } else if (value === 'hamburguesas') {
+        window.location.href = 'menu.html';
+      } else if (value === 'donde encontrarnos' || value === 'dónde encontrarnos') {
+        window.location.href = 'sucursales.html';
+      } else {
+        alert('No se encontró la página para: ' + value);
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>

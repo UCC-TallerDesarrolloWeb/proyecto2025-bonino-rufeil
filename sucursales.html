@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menú de Hamburguesas - La Mistica</title>
+  <title>Dónde encontrarnos - La Mistica</title>
   <link rel="stylesheet" href="styles.css" />
-
   <meta name="author" content="Joaquin Bonino, Demetrio Rufeil, Santino Vercesi" />
-  <meta name="description" content="Menú de hamburguesas clásicas, dobles y triples." />
-  <meta name="keywords" content="hamburguesas, menú, clásica, doble, triple" />
+  <meta name="description" content="Ubicación y contacto de La Mistica." />
+  <meta name="keywords" content="ubicación, mapa, contacto, instagram" />
 </head>
 <body>
   <header>
@@ -46,8 +45,8 @@
 
       <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html" aria-current="page">Hamburguesas</a></li>
-        <li><a href="sucursales.html">Dónde encontrarnos</a></li>
+        <li><a href="menu.html">Hamburguesas</a></li>
+        <li><a href="sucursales.html" aria-current="page">Dónde encontrarnos</a></li>
       </ul>
 
       <form class="search-form">
@@ -59,54 +58,16 @@
       </form>
     </div>
   </header>
-
   <main id="main" class="main-content">
-  <section class="container top-categories" aria-labelledby="titulo-menu">
-
-      <h2 class="heading-1">Simples</h2>
-      <div class="container-categories">
-          <a class="products-category product-simple" href="#clasica" aria-label="Ver hamburguesas clásicas">
-            <div class="card-product">
-              <p>Simple</p>
-              <span>$13.000</span>
-            </div>
-          </a>
-      </div>
-
-      <h2 class="heading-1">Dobles</h2>
-      <div class="container-categories">
-          <a class="products-category product-mistica" href="#doble-mistica" aria-label="Ver hamburguesa Mistica">
-            <div class="card-product">
-              <p>Mistica</p>
-              <span>$14.000</span>
-            </div>
-          </a>
-          <a class="products-category product-barbecue" href="#doble-barbecue" aria-label="Ver hamburguesa Barbecue">
-            <div class="card-product">
-              <p>Barbecue</p>
-              <span>$14.500</span>
-            </div>
-          </a>
-          <a class="products-category product-cheddar" href="#doble-cheddar" aria-label="Ver hamburguesa Cheddar">
-            <div class="card-product">
-              <p>Cheddar</p>
-              <span>$14.500</span>
-            </div>
-          </a>
-      </div>
-
-      <h2 class="heading-1">Triples</h2>
-      <div class="container-categories">
-          <a class="products-category product-barbecue" href="#triple" aria-label="Ver hamburguesas triples">
-            <div class="card-product">
-              <p>Triple</p>
-              <span>$15.000</span>
-            </div>
-          </a>
+    <section class="container ubicacion" aria-labelledby="titulo-ubicacion" style="margin: 4rem 0;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+        <iframe src="https://www.google.com/maps?q=-31.4167,-64.1833&z=15&output=embed" width="400" height="300" style="border-radius: 1rem; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="https://instagram.com/demerufeil" target="_blank" rel="noopener" style="display: inline-block;">
+          <img src="img/instagram.png" alt="Instagram La Mistica" style="width: 56px; height: 56px; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.07); background: #d8b97f; padding: 8px;" />
+        </a>
       </div>
     </section>
   </main>
-
   <footer>
     <p>© 2025 La Mistica.</p>
   </footer>

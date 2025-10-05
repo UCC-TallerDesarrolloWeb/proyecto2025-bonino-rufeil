@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 :root {
     --primary-color: #d8b97f;
@@ -9,6 +10,10 @@
 html, body {
     font-size: 62.5%;           /*paraasar de 16 px a 10 px */
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
 }
 *{
     margin: 0;
@@ -150,6 +155,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    position: relative;
 }
 
 
@@ -188,21 +194,13 @@ html, body {
 
 /* subrayado animado al hover */
 .menu a::after {
-    content: '';
-    width: 1.5rem;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    opacity: 0;
-    transition: all .3s ease;
+    /* Eliminado: rayita animada en hover */
+    display: none;
 }
 
 
 .menu a:hover::after {
-    opacity: 1;
+    /* Eliminado: rayita animada en hover */
 }
 
 
@@ -605,4 +603,20 @@ html, body {
     color: #fff;
     cursor: pointer;
 }
+/* menu */
+/* para que lo del menu no se subraye de azul los linnks */
+.container-categories a.card-category,
+.container-top-products a.card-category,
+.container-categories a.products-category,
+.container-top-products a.products-category {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
 
+.container-categories a.card-category:hover,
+.container-top-products a.card-category:hover,
+.container-categories a.products-category:hover,
+.container-top-products a.products-category:hover {
+    text-decoration: none;
+}
